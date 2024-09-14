@@ -1,0 +1,23 @@
+.app-layout__sidebar-open {
+  float: right;
+  @apply w-full sm:w-[calc(100%-235px)];
+
+  .app-layout__sidebar {
+    @apply w-[235px] left-0 hidden sm:block;
+  }
+}
+
+.app-layout__sidebar-closed {
+  @apply w-full sm:w-[calc(100%-100px)];
+  float: right;
+
+  .app-layout__sidebar {
+    @apply w-[100px] left-0 hidden sm:block;
+  }
+}
+
+.app-layout__sidebar {
+  z-index: 15;
+  @apply fixed left-0 top-0 h-full  border-r-border_light border-r-2
+}
+
