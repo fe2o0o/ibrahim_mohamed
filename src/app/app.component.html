@@ -1,23 +1,33 @@
 <div class="app-layout" [class]="sidebarState() ? '  app-layout__sidebar-open':'app-layout__sidebar-closed'">
 
-  <div  [@overlay]="isOverlay ? {value:'show' , params:{transitionParams:'.5s ease-in-out' } }:{value:'hide',params:{transitionParams:'.5s ease-in-out' },style:{left:0}} " class="app-layout__sidebar " [ngClass]="isOverlay ? 'app-layout__sidebar-over':'' " class="app-layout__sidebar">
-<span class="app-layout__sidebar___open-close-icon-wrap cursor-pointer z-20 " (click)="openCloseSidebar()">
-    <i class="fi absolute z-10 top-20 text-primary app-layout__sidebar___open-close-icon "  [class]="sidebarState() ? 'fi-rr-angle-double-small-left' : 'fi-rr-angle-double-small-right'"></i>
+  <div
+    [@overlay]="isOverlay ? {value:'show' , params:{transitionParams:'.5s ease-in-out' } }:{value:'hide',params:{transitionParams:'.5s ease-in-out' },style:{left:0}} "
+     [ngClass]="isOverlay ? 'app-layout__sidebar-over':'' " [class]="_GlobalService.moodSubject.getValue() ? 'border-r-border_dark border-r-2':'border-r-border_light border-r-2'" class="app-layout__sidebar " >
+    <span  class="app-layout__sidebar___open-close-icon-wrap cursor-pointer z-20 " (click)="openCloseSidebar()">
+      <i [ngClass]="_GlobalService.moodSubject.getValue() ? 'bg-darkColor':'bg-customWhite'" class="fi absolute z-10 top-20 text-primary app-layout__sidebar___open-close-icon "
+        [class]="sidebarState() ? 'fi-rr-angle-double-small-left font-semibold' : 'fi-rr-angle-double-small-right font-semibold'"></i>
 
     </span>
     <app-sidebar></app-sidebar>
   </div>
 
-  <div [ngClass]="_GlobalService.moodSubject.getValue() ? 'bg-darkColor':'bg-customWhite'" class="app-layout__main-content    ">
-     <div (click)="toogleOverLay()" class="absolute px-2 py-1 over   bg-primary">
-    <i class="fi fi-br-menu-burger"></i>  </div>
+  <div [ngClass]="_GlobalService.moodSubject.getValue() ? 'bg-darkColor':'bg-customWhite'"
+    class="app-layout__main-content    ">
+    <div (click)="toogleOverLay()" class="absolute right-2 top-2 px-2 py-1 over   bg-primary">
+      <i class="fi fi-br-menu-burger"></i>
+    </div>
     <router-outlet></router-outlet>
   </div>
 </div>
-<div class=" absolute z-30 right-5 top-40">
-  <div (click)="toggleTheme()" class="mode  p-2">
-    <i class="fi fi-sr-brightness"></i>
-    <i class="fi fi-sr-moon"></i>
+<div class=" absolute z-30 cursor-pointer right-0 shadow-sm rounded-xl w-12 top-40">
+  <div (click)="toggleTheme()" class="mode flex justify-center  p-2">
+    @if(_GlobalService.moodSubject.getValue()){
+
+      <i class="fi fi-sr-brightness text-lg"></i>
+    }@else {
+
+      <i class="fi fi-sr-moon text-lg"></i>
+    }
   </div>
 
 </div>

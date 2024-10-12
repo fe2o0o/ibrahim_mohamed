@@ -1,6 +1,6 @@
-.container{
-  background-color: white;
-}
+// .container{
+//   background-color: white;
+// }
 .corner{
   width: 1rem;
   height: 1rem;
@@ -36,3 +36,9 @@ nav ul li{
   margin-bottom: .5rem;
 }
 
+
+
+.active{
+  @apply text-primary;
+    border-bottom: 1px solid #006CB5 !important;
+}

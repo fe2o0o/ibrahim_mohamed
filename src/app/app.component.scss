@@ -18,11 +18,11 @@
 
 .app-layout__sidebar {
   z-index: 15;
-  @apply fixed left-0 top-0 h-full  border-r-border_light border-r-2
+  @apply fixed left-0 top-0 h-full
 }
 
 .app-layout__sidebar___open-close-icon {
-  @apply border-2 border-border_light  rounded-full;
+  @apply border-2  rounded-full;
   position: absolute;
   right: -.75rem;
   width: 1.5rem;

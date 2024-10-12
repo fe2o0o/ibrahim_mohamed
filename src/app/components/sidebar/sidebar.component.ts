@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { GlobalService } from '../../services/global.service';
+import { NgClass } from '@angular/common';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [],
+  imports: [NgClass , RouterLink , RouterLinkActive],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
-  constructor(private _GlobalService: GlobalService) {
+  constructor(public _GlobalService: GlobalService) {
 
 
     this._GlobalService.sideBarStatus.subscribe({

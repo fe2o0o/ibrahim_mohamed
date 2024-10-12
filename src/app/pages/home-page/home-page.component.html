@@ -1,8 +1,8 @@
 <div class="container p-6 grid grid-cols-12 items-center  ">
     <!-- <div class="col-span-1"></div> -->
     <div class="info col-span-12  lg:col-span-6 ">
-      <h2 class="text-2xl mb-4 font-bold text-blackColor">Hello, my name is <span class="text-primary text-base custom-font">ibrahim mohamed</span></h2>
-      <h4 class="text-lg mb-2 font-semibold" >I'm a
+      <h2  [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'" class="text-2xl mb-4 font-bold ">Hello, my name is <span class="text-primary text-base  custom-font">ibrahim mohamed</span></h2>
+      <h4 [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'" class="text-lg mb-2 font-semibold" >I'm a
         <ngx-typewriter
         [words]="words"
         [typeSpeed]="100"
@@ -10,7 +10,7 @@
         [panelClass]="'text-primary font-bold'"
       />
       </h4>
-      <p class="font-medium mb-4 ">
+      <p [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'"  class="font-medium mb-4 ">
         I'm a dedicated web developer with over 2 years of experience  building dynamic and user-friendly web applications. My expertise lies in  <span class="text-primary font-bold">Angular & Nodejs</span>  I've successfully led projects from conception to deployment, delivering solutions that exceed client expectations
       </p>
 

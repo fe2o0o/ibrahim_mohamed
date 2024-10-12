@@ -11,7 +11,8 @@ module.exports = {
       border_light: "rgb(var(--borderLightColor) / <alpha-value>)",
       customWhite:"rgb(var(--bg-custom-white) / <alpha-value>)",
       blackColor: "rgb(var(--blackColor) / <alpha-value>)",
-      darkColor:"rgb(var(--darkBlack) / <alpha-value>)"
+      darkColor: "rgb(var(--darkBlack) / <alpha-value>)",
+      border_dark: "rgb(var(--borderDarkColor) / <alpha-value>)"
     }
   },
   plugins: [],

@@ -1,4 +1,4 @@
-<div class="container  h-full flex flex-col  relative  justify-between   ">
+<div [ngClass]="_GlobalService.moodSubject.getValue() ? 'bg-blackColor':'bg-customWhite'" class="container  h-full flex flex-col  relative  justify-between   ">
   @if(isOverLay){
     <div (click)="toggleOverLay()"  class="closed_side_bar text-primary flex justify-end p-4 absolute right-0  ">
         <i class="fi fi-br-menu-burger"></i>
@@ -6,38 +6,38 @@
   }
   <div class="head relative mt-20 p-4 h-fit w-fit mx-auto">
     <span class="corner corner-top  border-t-primary border-r-primary "></span>
-    <h1 class="md:text-2xl text-sm font-bold">{{sideBarState ? "Ibrahim" : "H"}} </h1>
+    <h1 [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'" class="md:text-2xl text-sm font-bold">{{sideBarState ? "Ibrahim" : "H"}} </h1>
     <span class="corner corner-bottom  border-b-primary border-l-primary "></span>
   </div>
   <nav class="mb-24">
     <ul>
-      <li>
+      <li routerLinkActive="active" routerLink="/home"  [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':''">
         <i class="fi fi-sr-home"></i>
         @if(sideBarState){
           <a class="text-lg font-medium" href="">Home</a>
         }
       </li>
-      <li>
+      <li [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'">
         <i class="fi fi-sr-user"></i>
         @if(sideBarState){
           <a class="text-lg font-medium" href="">About</a>
         }
       </li>
-      <li>
+      <li [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'" >
         <i class="fi fi-bs-list-check"></i>
         @if (sideBarState) {
 
           <a class="text-lg font-medium" href="">Service</a>
         }
       </li>
-      <li>
+      <li [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'">
         <i class="fi fi-sr-briefcase"></i>
         @if(sideBarState){
 
           <a class="text-lg font-medium" href="">Portfolio</a>
         }
       </li>
-      <li>
+      <li [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'">
         <i class="fi fi-sr-comments"></i>
         @if(sideBarState){
 
