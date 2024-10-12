@@ -1,7 +1,8 @@
-<div class="container p-6 flex lg:flex-nowrap  flex-wrap items-center gap-16 ">
-    <div class="info ">
+<div class="container p-6 grid grid-cols-12 items-center  ">
+    <!-- <div class="col-span-1"></div> -->
+    <div class="info col-span-12  lg:col-span-6 ">
       <h2 class="text-2xl mb-4 font-bold text-blackColor">Hello, my name is <span class="text-primary text-base custom-font">ibrahim mohamed</span></h2>
-      <h4 class="text-lg mb-2 font-semibold" >I'm a 
+      <h4 class="text-lg mb-2 font-semibold" >I'm a
         <ngx-typewriter
         [words]="words"
         [typeSpeed]="100"
@@ -18,8 +19,8 @@
         <span>Download CV</span>
       </button>
     </div>
-
-    <div class="image relative">
+    <div class="col-span-2"></div>
+    <div class="image mx-auto relative xl:col-span-3 lg:col-span-3 md:col-span-6 col-span-12 ">
       <span class="corner corner-top border-t-primary border-r-primary "></span>
       <img class="w-full" src="assets/images/hema.png" alt="">
       <span class="corner border-b-primary border-l-primary corner-bottom"></span>
