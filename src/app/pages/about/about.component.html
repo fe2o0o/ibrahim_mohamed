@@ -1,31 +1,50 @@
-<div class="container p-8 grid ">
-  <div class="head pr-4">
+<div class="container p-12 grid ">
+  <div class="head pr-8 mb-6">
     <h2 class="text-3xl font-bold mb-6 relative">About Me</h2>
     <p class="font-medium mb-2">
-      I am <span class="text-primary font-semibold ">Ibrahim Mohamed Tawfik</span>, a web developer specializing in
-      building web applications using the Angular framework. I hold a degree in Computer Science and Information Systems
-      from King Mariout University in Alexandria, which has provided me with a solid foundation in computer science.
+      I am <span class="text-primary font-semibold ">Ibrahim Mohamed Tawfik</span>, a web developer with a Bachelor's degree in Computer Science and Information Systems from King Mariout University in Alexandria, I have cultivated a strong foundation in computer science. My expertise lies in crafting dynamic web applications leveraging the Angular framework.
     </p>
     <p class="font-medium mb-2">
-      Over the past year, I have honed my skills in front-end development, focusing on creating dynamic and interactive
-      web applications. I have the ability to build comprehensive web apps using both Angular and Node.js, allowing me
-      to deliver complete solutions that meet client needs.
+      With a year of dedicated experience in front-end development, I have sharpened my ability to design and implement dynamic web applications. Proficient in both Angular and Node.js, I am capable of delivering end-to-end solutions that align with client requirements.
     </p>
 
     <p class="font-medium mb-2">
-      I am always eager to learn and grow, with a passion for projects that challenge my skills and drive innovation. I
-      believe in the power of teamwork and enjoy collaborating with others to achieve shared goals.
+      Driven by a passion for continuous learning and innovation, I thrive on projects that push my technical boundaries. A strong advocate for collaboration, I enjoy working in teams to achieve shared objectives.
     </p>
   </div>
 
 
   <div class="cards grid grid-cols-12">
-    <div class="time_experince col-span-5 border justify-start ">
-      <p-timeline [value]="events" align="left">
+    <div class="time_experince col-span-5 justify-start ">
+      <div class="head mb-4">
+        <h2 class="text-2xl font-bold">Experince</h2>
+      </div>
+      <div class="time_line">
+             <p-timeline [value]="events" align="left">
         <ng-template pTemplate="content" let-event>
-          {{ event.status }}
+          <div class="flex items-center gap-4 mb-2">
+            <span>From: {{event.startDate}}</span>
+            <span>To: {{event.endDate}}</span>
+          </div>
+          <div class="mb-6">
+            <h4 class="mb-2 font-bold">{{event.companyName}}</h4>
+            <h5>Summary:</h5>
+            @for( pro of event.sumary ; track pro; ){
+              <h6>{{pro.title}}</h6>
+              <p>{{pro.desc}}</p>
+              <ul class="features-list pl-6">
+                @for(feature of pro.features ; track feature){
+                  <li class="text-sm">{{feature}}</li>
+                }
+              </ul>
+            }
+            <div>
+
+            </div>
+          </div>
         </ng-template>
       </p-timeline>
+      </div>
     </div>
   </div>
 

@@ -22,7 +22,7 @@
 }
 
 .app-layout__sidebar___open-close-icon {
-  @apply border-2  rounded-full;
+  @apply border-2  rounded-full transition-all;
   position: absolute;
   right: -.75rem;
   width: 1.5rem;

@@ -11,12 +11,39 @@ import { TimelineModule } from 'primeng/timeline';
 export class AboutComponent {
 
 
-    events = [
-            { status: 'Ordered', date: '15/10/2020 10:30', icon: 'pi pi-shopping-cart', color: '#9C27B0', image: 'game-controller.jpg' },
-            { status: 'Processing', date: '15/10/2020 14:00', icon: 'pi pi-cog', color: '#673AB7' },
-            { status: 'Shipped', date: '15/10/2020 16:15', icon: 'pi pi-shopping-cart', color: '#FF9800' },
-            { status: 'Delivered', date: '16/10/2020 10:00', icon: 'pi pi-check', color: '#607D8B' }
-        ];
+  events = [
+      {
+        startDate: "4/2024",
+        endDate: "present",
+        companyName: "DevSolutions Company",
+        sumary: [{
+          title: "Super Admin Application for CRM Management.",
+          desc:"Developed a Super Admin application to manage a CRM system, enabling complete control over data and users.",
+          features: [
+            "Designed and implemented user interfaces to facilitate management and control.",
+            "Developed new features based on user requirements.",
+            "Developed advanced and dynamic forms using Reactive Forms to improve data handling and user input.",
+            "Optimized application performance and user experience."
+          ]
+        }]
+      },
+      {
+        startDate: "4/2024",
+        endDate: "present",
+        companyName: "DevSolutions Company",
+        sumary: [{
+          title: "Super Admin Application for CRM Management.",
+          desc:"Developed a Super Admin application to manage a CRM system, enabling complete control over data and users.",
+          features: [
+            "Designed and implemented user interfaces to facilitate management and control.",
+            "Developed new features based on user requirements.",
+            "Developed advanced and dynamic forms using Reactive Forms to improve data handling and user input.",
+            "Optimized application performance and user experience."
+          ]
+        }]
+    },
+      {}
+    ];
 
 
 }
