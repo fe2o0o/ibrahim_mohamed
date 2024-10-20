@@ -1,0 +1,32 @@
+<div class="container p-8 grid ">
+  <div class="head pr-4">
+    <h2 class="text-3xl font-bold mb-6 relative">About Me</h2>
+    <p class="font-medium mb-2">
+      I am <span class="text-primary font-semibold ">Ibrahim Mohamed Tawfik</span>, a web developer specializing in
+      building web applications using the Angular framework. I hold a degree in Computer Science and Information Systems
+      from King Mariout University in Alexandria, which has provided me with a solid foundation in computer science.
+    </p>
+    <p class="font-medium mb-2">
+      Over the past year, I have honed my skills in front-end development, focusing on creating dynamic and interactive
+      web applications. I have the ability to build comprehensive web apps using both Angular and Node.js, allowing me
+      to deliver complete solutions that meet client needs.
+    </p>
+
+    <p class="font-medium mb-2">
+      I am always eager to learn and grow, with a passion for projects that challenge my skills and drive innovation. I
+      believe in the power of teamwork and enjoy collaborating with others to achieve shared goals.
+    </p>
+  </div>
+
+
+  <div class="cards grid grid-cols-12">
+    <div class="time_experince col-span-5 border justify-start ">
+      <p-timeline [value]="events" align="left">
+        <ng-template pTemplate="content" let-event>
+          {{ event.status }}
+        </ng-template>
+      </p-timeline>
+    </div>
+  </div>
+
+</div>

@@ -14,27 +14,27 @@
       <li routerLinkActive="active" routerLink="/home"  [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':''">
         <i class="fi fi-sr-home"></i>
         @if(sideBarState){
-          <a class="text-lg font-medium" href="">Home</a>
+          <a class="text-lg font-medium" >Home</a>
         }
       </li>
-      <li [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'">
+      <li routerLinkActive="active" routerLink="/about"  [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'">
         <i class="fi fi-sr-user"></i>
         @if(sideBarState){
-          <a class="text-lg font-medium" href="">About</a>
+          <a class="text-lg font-medium" >About</a>
         }
       </li>
       <li [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'" >
         <i class="fi fi-bs-list-check"></i>
         @if (sideBarState) {
 
-          <a class="text-lg font-medium" href="">Service</a>
+          <a class="text-lg font-medium" >Service</a>
         }
       </li>
       <li [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'">
         <i class="fi fi-sr-briefcase"></i>
         @if(sideBarState){
 
-          <a class="text-lg font-medium" href="">Portfolio</a>
+          <a class="text-lg font-medium" >Portfolio</a>
         }
       </li>
       <li [ngClass]="_GlobalService.moodSubject.getValue() ? 'text-customWhite':'text-blackColor'">
